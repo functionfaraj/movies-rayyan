@@ -1,43 +1,12 @@
 {
   "direction": "rtl",
-  "pageName": {
-    "welcome": "مرحبا"
+  "pageTitle": {
+    "home": "افلامك - الصفحة الرئيسية"
   },
-  "layout": {
-    "header": {
-      "appName": "تطبيق حانوت",
-      "appNameDesc": "لوحة التحكم لتطبيق حانوت",
-      "welcome": "أهلا بك {{name}}",
-      "welcomeDesc": "شاهد ما هو جديد في تجارتك الالكترونية  لهذا اليوم"
-    }
-  },
-  "login": {
-    "login": "تسجيل الدخول",
-    "rayyan": "تطبيق حانوت",
-    "rayyanDescription": "أهلاً بك في لوحة التحكم لتطبيق حانوت",
-    "whatWillShow": "عند تسجيل الدخول بمستخدم مسؤول في لوحة التحكم، سوف تمنحك لوحة التحكم التالي:",
-    "controll": "{{number}}. التحكم",
-    "username": "اسم المستخدم",
-    "password": "كلمة المرور",
-    "storeKey": "رمز المتجر",
-    "errors": {
-      "invalidCred": "البيانات المدخلة خاطئة الرجاء التحقق",
-      "password": "الرجاء التحقق من كلمة المرور",
-      "storeKey": "الرجاء التحقق من رمز المتجر",
-      "username": "الرجاء التحقق من اسم المستخدم"
-    }
-  },
-  "navBarSide": {
-    "search": "بحث",
-    "logout": "تسجيل الخروج",
-    "tabs": {
-      "mainBoard": "اللوحة الرئيسة",
-      "shortVideo": "الفيديو هات القصيرة Reels",
-      "commentsRating": "قسم التعليقات والتقييم",
-      "productsDetails": "المنتجات وتفاصيلها",
-      "sectionsBranches": "الأقســـام وتفرعاتها",
-      "informationSettings": "معلومات واعدادات التطبيق",
-      "usersCcontrolPanel": "المستخدمين في لوحة التحكم"
-    }
+  "footer": {
+    "privacyPolicy": "سياسة الخصوصية",
+    "terms": "الشروط والقوانين",
+    "contactUs": "اتصل بنا",
+    "career": "الوظائف"
   }
 }

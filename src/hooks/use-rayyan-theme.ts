@@ -55,8 +55,15 @@ const useRayyanTheme = () => {
     },
     [theme]
   );
+  const opacityColor = useCallback(
+    (degree: number) => {
+      return getColor("opacity", degree);
+    },
+    [theme]
+  );
   return {
     theme,
+    opacityColor,
     changedTheme,
     changeThemeMode,
     successColor,
