@@ -1,0 +1,16 @@
+{
+  "direction": "rtl",
+  "pageName": {
+    "welcome": "ברוך הבא"
+  },
+  "login": {
+    "welcome": "Welcome to our company",
+    "weAreExcited": "We're excited to work with you and deliver outstanding printing solutions that exceed your expectations.",
+    "poweredBy": "powered by",
+    "GoMake": "GoMake",
+    "rememberMe": "Remember me",
+    "login": "Login",
+    "username": "Username",
+    "password": "Password"
+  }
+}
