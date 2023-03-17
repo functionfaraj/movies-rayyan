@@ -3,6 +3,12 @@
   "pageTitle": {
     "home": "افلامك - الصفحة الرئيسية"
   },
+  "header": {
+    "home": "الرئيسية",
+    "series": "المسلسلات",
+    "movies": "الافلام",
+    "favorite": "المفضلة"
+  },
   "footer": {
     "privacyPolicy": "سياسة الخصوصية",
     "terms": "الشروط والقوانين",

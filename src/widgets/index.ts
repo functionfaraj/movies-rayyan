@@ -1,1 +1,1 @@
-export * from "./waiting-auth";
+export * from "./home-header";

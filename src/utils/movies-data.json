@@ -24,20 +24,6 @@
     ],
     "movies": [
         {
-            "id": 1,
-            "title": "Beetlejuice",
-            "year": "1988",
-            "runtime": "92",
-            "genres": [
-                "Comedy",
-                "Fantasy"
-            ],
-            "director": "Tim Burton",
-            "actors": "Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page",
-            "plot": "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.",
-            "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg"
-        },
-        {
             "id": 2,
             "title": "The Cotton Club",
             "year": "1984",
@@ -51,20 +37,6 @@
             "actors": "Richard Gere, Gregory Hines, Diane Lane, Lonette McKee",
             "plot": "The Cotton Club was a famous night club in Harlem. The story follows the people that visited the club, those that ran it, and is peppered with the Jazz music that made it so famous.",
             "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
-        },
-        {
-            "id": 3,
-            "title": "The Shawshank Redemption",
-            "year": "1994",
-            "runtime": "142",
-            "genres": [
-                "Crime",
-                "Drama"
-            ],
-            "director": "Frank Darabont",
-            "actors": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
-            "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-            "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX300.jpg"
         },
         {
             "id": 4,
@@ -590,21 +562,6 @@
             "actors": "Hugh Jackman, Russell Crowe, Anne Hathaway, Amanda Seyfried",
             "plot": "In 19th-century France, Jean Valjean, who for decades has been hunted by the ruthless policeman Javert after breaking parole, agrees to care for a factory worker's daughter. The decision changes their lives forever.",
             "posterUrl": "http://ia.media-imdb.com/images/M/MV5BMTQ4NDI3NDg4M15BMl5BanBnXkFtZTcwMjY5OTI1OA@@._V1_SX300.jpg"
-        },
-        {
-            "id": 40,
-            "title": "L.A. Confidential",
-            "year": "1997",
-            "runtime": "138",
-            "genres": [
-                "Crime",
-                "Drama",
-                "Mystery"
-            ],
-            "director": "Curtis Hanson",
-            "actors": "Kevin Spacey, Russell Crowe, Guy Pearce, James Cromwell",
-            "plot": "As corruption grows in 1950s LA, three policemen - one strait-laced, one brutal, and one sleazy - investigate a series of murders with their own brand of justice.",
-            "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWEwNDhhNWUtYWMzNi00ZTNhLWFiZDAtMjBjZmJhMTU0ZTY2XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
         },
         {
             "id": 41,

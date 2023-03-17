@@ -1,11 +1,11 @@
 import { ELanguage } from "@/enums";
 import { useRayyanLanguage } from "@/hooks/use-rayyan-language";
 import { NonAuthLayout } from "@/layouts";
+import { HomeHeaderWidget } from "@/widgets";
 import Head from "next/head";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  const { changeLanguage } = useRayyanLanguage()
   const { t } = useTranslation()
   return (
     <>
@@ -15,9 +15,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <NonAuthLayout>
-        Home
-        <div onClick={() => changeLanguage(ELanguage.AR)}>العربية</div>
-        <div onClick={() => changeLanguage(ELanguage.EN)}>EN</div>
+        <HomeHeaderWidget />
       </NonAuthLayout>
     </>
   );

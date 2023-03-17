@@ -9,8 +9,7 @@ const useStyle = () => {
         backgroundColor: neutralColor(800),
       },
       bodyContainer: {
-        minHeight: "87vh",
-        height: "87vh"
+        minHeight: "87vh"
       }
     };
   }, [theme]);

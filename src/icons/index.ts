@@ -1,8 +1,5 @@
-export * from "./whatsapp";
-export * from "./gmail";
-export * from "./error";
-export * from "./search";
-export * from "./application";
-export * from "./bell";
-export * from "./settings";
-export * from "./arrow-down";
+export * from "./home";
+export * from "./movies";
+export * from "./series";
+export * from "./favorite";
+

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   serverRuntimeConfig: {
     API_SERVER: process.env.API_SERVER,
     ENVIROMENT: process.env.ENVIROMENT,
@@ -15,10 +15,10 @@ const nextConfig = {
     webpack5: true,
   },
   images: {
-    domains: [process.env.BASE_HOST || "localhost","i.ibb.co"],
+    domains: [process.env.BASE_HOST || "localhost", "images-na.ssl-images-amazon.com", "ia.media-imdb.com"],
   },
-  productionBrowserSourceMaps: true,  
-    pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js']
+  productionBrowserSourceMaps: true,
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js']
 
 };
 

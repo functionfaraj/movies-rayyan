@@ -71,5 +71,6 @@ export interface ITheme {
     12: string;
     101: string;
     102: string;
+    103: string;
   }
 }

@@ -3,6 +3,12 @@
   "pageTitle": {
     "home": "Movies - Home page"
   },
+  "header": {
+    "home": "Home",
+    "series": "Series",
+    "movies": "Movies",
+    "favorite": "Favorite"
+  },
   "footer": {
     "privacyPolicy": "PRIVACY POLICY",
     "terms": "TERMS",

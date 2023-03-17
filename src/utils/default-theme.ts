@@ -65,5 +65,6 @@ export const defaultTheme: ITheme = {
     12: "rgba(249, 249, 249, 0.4)",
     101: "rgba(255, 255, 255, 0.1)",
     102: "linear-gradient(180deg, #0E1012 -50.62%, rgba(14, 16, 18, 0) 100%)",
+    103: "rgba(0, 0, 0, 0.3)",
   }
 }

@@ -35,7 +35,16 @@ const useStyle = () => {
       },
       link: {
         cursor: 'pointer'
+      },
+      linkAR: {
+        cursor: 'pointer',
+        ...FONT_FAMILY.Cairo(400, 12)
+      },
+      linkEN: {
+        cursor: 'pointer',
+        ...FONT_FAMILY.Inter(400, 12)
       }
+
     };
   }, [theme, i18next.language]);
   return {
