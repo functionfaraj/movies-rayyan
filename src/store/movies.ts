@@ -7,6 +7,7 @@ export interface IMovie {
   "released": string;
   "runtime": string;
   "genre_en": string;
+  "genre_ar": string;
   "actors": string;
   "director": string;
   "plot_en": string;
@@ -55,37 +56,6 @@ export const moviesState = atom({
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY2ODQ3NjMyMl5BMl5BanBnXkFtZTcwODg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxOTEwNDcxN15BMl5BanBnXkFtZTcwOTg0MTUzNA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYxMDg1Nzk1MV5BMl5BanBnXkFtZTcwMDk0MTUzNA@@._V1_SX1500_CR0,0,1500,999_AL_.jpg"
-      ]
-    },
-    {
-      "title_en": "i Am Legend",
-      "title_ar": "انا اسطورة",
-      "year": "2007",
-      "rated": "pG-13",
-      "released": "14 Dec 2007",
-      "runtime": "101 min",
-      "genre_en": "drama, Horror, Sci-Fi",
-      "genre_ar": "دراما ، رعب ، خيال علمي",
-      "director": "Francis Lawrence",
-      "Writer": "Mark Protosevich (screenplay), Akiva Goldsman (screenplay), Richard Matheson (novel), John William Corrington, Joyce Hooper Corrington",
-      "actors": "Will Smith, Alice Braga, Charlie Tahan, Salli Richardson-Whitfield",
-      "plot_en": "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
-      "plot_ar": "بعد سنوات من طاعون يقتل معظم البشر ويحول البقية إلى وحوش ، يكافح الناجي الوحيد في مدينة نيويورك بشجاعة لإيجاد علاج",
-      "language": "English",
-      "country": "USA",
-      "awards": "9 wins & 21 nominations.",
-      "poster": "http://ia.media-imdb.com/images/M/MV5BMTU4NzMyNDk1OV5BMl5BanBnXkFtZTcwOTEwMzU1MQ@@._V1_SX300.jpg",
-      "Metascore": "65",
-      "imdbRating": "7.2",
-      "imdbVotes": "533,874",
-      "imdbID": "tt0480249",
-      "type": "movie",
-      "response": "true",
-      "images": [
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTI0NTI4NjE3NV5BMl5BanBnXkFtZTYwMDA0Nzc4._V1_.jpg",
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTIwMDg2MDU4M15BMl5BanBnXkFtZTYwMTA0Nzc4._V1_.jpg",
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5MDM1OTU5OV5BMl5BanBnXkFtZTYwMjA0Nzc4._V1_.jpg",
-        "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA0MTI2NjMzMzFeQTJeQWpwZ15BbWU2MDMwNDc3OA@@._V1_.jpg"
       ]
     },
     {

@@ -3,9 +3,13 @@ import { useStyle } from "./style";
 import logo from '@/images/logo.png';
 import { useTranslation } from "react-i18next";
 import { FavoriteIcon, HomeIcon, MoviesIcon, SeriesIcon } from "@/icons";
+import { ELanguage } from "@/enums";
+import { useRayyanLanguage } from "@/hooks/use-rayyan-language";
+import i18next from "i18next";
 const Header = () => {
   const { clasess } = useStyle();
   const { t } = useTranslation()
+  const { changeLanguage } = useRayyanLanguage()
   return (
     <div style={clasess.container}>
       <div style={clasess.linksContainer}>
@@ -14,7 +18,7 @@ const Header = () => {
           <div><HomeIcon /></div>
           <div style={clasess.linkLbl}>{t("header.home")}</div>
         </div>
-        <div style={clasess.linkContainer}>
+        {/* <div style={clasess.linkContainer}>
           <div><SeriesIcon /></div>
           <div style={clasess.linkLbl}>{t("header.series")}</div>
         </div>
@@ -25,6 +29,10 @@ const Header = () => {
         <div style={clasess.linkContainer}>
           <div><FavoriteIcon /></div>
           <div style={clasess.linkLbl}>{t("header.favorite")}</div>
+        </div> */}
+        <div style={clasess.linkContainer}>
+          {i18next.language === ELanguage.EN && <div style={clasess.linkAR} onClick={() => changeLanguage(ELanguage.AR)}>العربية</div>}
+          {i18next.language === ELanguage.AR && <div style={clasess.linkEN} onClick={() => changeLanguage(ELanguage.EN)}>EN</div>}
         </div>
       </div>
       <div>

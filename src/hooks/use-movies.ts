@@ -1,4 +1,5 @@
 import { IMovie, moviesState } from "@/store/movies";
+import i18next from "i18next";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
@@ -22,11 +23,14 @@ const useRayyanMovies = () => {
     }
   }, [])
 
+  const getMoviesByGenre = useCallback((genre: string) => {
+    return movies.filter((movie: IMovie | any) => movie[`genre_${i18next.language}`].toLowerCase().includes(genre.toLowerCase()))
+  }, [movies, i18next.language])
   useEffect(() => {
     if (!randomMovie)
       getRandomMovie()
   }, [movies])
-  return { movies, randomMovie };
+  return { movies, randomMovie, getMoviesByGenre };
 };
 
 export { useRayyanMovies };
