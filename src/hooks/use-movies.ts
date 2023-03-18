@@ -5,15 +5,20 @@ import { useRecoilValue } from "recoil";
 
 const useRayyanMovies = () => {
   const movies = useRecoilValue(moviesState);
-  const [randomMovie, setRandomMovie] = useState<null | IMovie>(null)
+  const [randomMovie, setRandomMovie] = useState<any | null | IMovie>(null)
   const getRandomMovie = useCallback(() => {
     if (movies.length === 0) {
       return null;
     }
     if (!randomMovie) {
-      const randomIndex = Math.floor(Math.random() * movies.length);
-      console.log(movies[randomIndex].id)
-      setRandomMovie(movies[randomIndex])
+      let run = true
+      do {
+        const randomIndex = Math.floor(Math.random() * movies.length);
+        if (movies[randomIndex]) {
+          setRandomMovie(movies[randomIndex])
+          run = false
+        }
+      } while (run)
     }
   }, [])
 
