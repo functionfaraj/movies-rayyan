@@ -27,7 +27,7 @@ const LeatestGenreMoviesWidget = ({ genre }: { genre: string }) => {
           <div style={clasess.genreTitle}>{genre}</div>
           <div style={clasess.moviesContainer}>
             {
-              getMoviesByGenre(genre).map((movie: IMovie | any) => {
+              getMoviesByGenre(genre).map((movie: IMovie) => {
                 return (<div key={movie[`title_${i18next.language}`]} style={clasess.movie}>
                   <img src={movie.poster} alt={`${movie[`title_${i18next.language}`]}`} width={240} height={361} style={clasess.image} />
                 </div>)
