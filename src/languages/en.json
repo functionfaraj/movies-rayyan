@@ -8,12 +8,19 @@
     "series": "Series",
     "movies": "Movies",
     "favorite": "Favorite",
-    "seeMore": "See more"
+    "seeMore": "See more",
+    "search": "Search"
   },
   "footer": {
     "privacyPolicy": "PRIVACY POLICY",
     "terms": "TERMS",
     "contactUs": "CONTACT US",
     "career": "CAREER"
+  },
+  "movie": {
+    "title": "Movie",
+    "play": "Play",
+    "votes": "Votes",
+    "released": "Released"
   }
 }

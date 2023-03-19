@@ -3,9 +3,11 @@ import i18next from "i18next";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
+import { useRayyanRouter } from "./use-rayyan-router";
 
 const useRayyanMovies = () => {
   const movies = useRecoilValue(moviesState);
+  const { navigate } = useRayyanRouter();
   const [randomMovie, setRandomMovie] = useState<any | null | IMovie>(null);
   const getRandomMovie = useCallback(() => {
     if (movies.length === 0) {
@@ -33,10 +35,26 @@ const useRayyanMovies = () => {
     },
     [movies, i18next.language]
   );
+
+  const getMovieById = useCallback(
+    (id: number) => {
+      return movies.find((movie: IMovie) => movie.id === id);
+    },
+    [movies, i18next.language]
+  );
+
+  const goToMovie = useCallback(
+    (id: number) => {
+      console.log(id);
+      navigate(`/movie/${id}`);
+    },
+    [movies, i18next.language]
+  );
+
   useEffect(() => {
     if (!randomMovie) getRandomMovie();
   }, [movies]);
-  return { movies, randomMovie, getMoviesByGenre };
+  return { movies, randomMovie, getMoviesByGenre, getMovieById, goToMovie };
 };
 
 export { useRayyanMovies };

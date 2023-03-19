@@ -2,7 +2,7 @@
 
 First, install required libraries:
 ```bash
-npm i
+npm i --force
 # or
 yarn
 ```

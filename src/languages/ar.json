@@ -8,12 +8,19 @@
     "series": "المسلسلات",
     "movies": "الافلام",
     "favorite": "المفضلة",
-    "seeMore": "مشاهدة التفاصيل"
+    "seeMore": "مشاهدة التفاصيل",
+    "search": "البحث"
   },
   "footer": {
     "privacyPolicy": "سياسة الخصوصية",
     "terms": "الشروط والقوانين",
     "contactUs": "اتصل بنا",
     "career": "الوظائف"
+  },
+  "movie": {
+    "title": "فلم",
+    "play": "مشاهدة",
+    "votes": "تصويتات",
+    "released": "الاصدار"
   }
 }

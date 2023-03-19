@@ -1,5 +1,6 @@
 import { atom } from "recoil";
 export interface IMovie {
+  id: number;
   title_en: string;
   title_ar: string;
   year: string;
@@ -28,6 +29,7 @@ export const moviesState = atom({
   key: "moviesState",
   default: [
     {
+      id: 1,
       title_en: "avatar",
       title_ar: "افاتار",
       year: "2009",
@@ -47,7 +49,7 @@ export const moviesState = atom({
       country: "USA, UK",
       awards: "Won 3 Oscars. Another 80 wins & 121 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg",
       Metascore: "83",
       imdbRating: "7.9",
       imdbVotes: "890,617",
@@ -63,6 +65,7 @@ export const moviesState = atom({
       ],
     },
     {
+      id: 2,
       title_en: "300",
       title_ar: "300",
       year: "2006",
@@ -83,7 +86,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "16 wins & 42 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMjAzNTkzNjcxNl5BMl5BanBnXkFtZTYwNDA4NjE3._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMjAzNTkzNjcxNl5BMl5BanBnXkFtZTYwNDA4NjE3._V1_SX300.jpg",
       Metascore: "52",
       imdbRating: "7.7",
       imdbVotes: "611,046",
@@ -97,6 +100,7 @@ export const moviesState = atom({
       ],
     },
     {
+      id: 3,
       title_en: "the Avengers",
       title_ar: "المنتقمون",
       year: "2012",
@@ -116,7 +120,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "Nominated for 1 Oscar. Another 34 wins & 75 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SX300.jpg",
       Metascore: "69",
       imdbRating: "8.1",
       imdbVotes: "1,003,301",
@@ -132,6 +136,7 @@ export const moviesState = atom({
       ],
     },
     {
+      id: 4,
       title_en: "the Wolf of Wall Street",
       title_ar: "ذئب وال ستريت",
       year: "2013",
@@ -152,7 +157,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "Nominated for 5 Oscars. Another 35 wins & 154 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg",
       Metascore: "75",
       imdbRating: "8.2",
       imdbVotes: "786,985",
@@ -168,6 +173,7 @@ export const moviesState = atom({
       ],
     },
     {
+      id: 5,
       title_en: "interstellar",
       title_ar: "واقع بين النجوم",
       year: "2014",
@@ -187,7 +193,7 @@ export const moviesState = atom({
       country: "USA, UK",
       awards: "Won 1 Oscar. Another 39 wins & 134 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg",
       Metascore: "74",
       imdbRating: "8.6",
       imdbVotes: "937,412",
@@ -203,6 +209,7 @@ export const moviesState = atom({
       ],
     },
     {
+      id: 6,
       title_en: "game of Thrones",
       year: "2011–",
       rated: "tV-MA",
@@ -218,7 +225,7 @@ export const moviesState = atom({
       country: "USA, UK",
       awards: "Won 1 Golden Globe. Another 185 wins & 334 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMjM5OTQ1MTY5Nl5BMl5BanBnXkFtZTgwMjM3NzMxODE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMjM5OTQ1MTY5Nl5BMl5BanBnXkFtZTgwMjM3NzMxODE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "9.5",
       imdbVotes: "1,046,830",
@@ -239,6 +246,7 @@ export const moviesState = atom({
         "فيما تتفجر حرب أهلية بين عدة عائلات نبيلة في ويستروس، يحاول أبناء حكام الأرض السابقين الصعود إلى السلطة. وفي الوقت نفسه، تخطط جنس نسيان للعودة بعد آلاف السنين في الشمال والقضاء على البشرية.",
     },
     {
+      id: 7,
       title_en: "Vikings",
       year: "2013–",
       rated: "tV-14",
@@ -256,7 +264,7 @@ export const moviesState = atom({
       awards:
         "Nominated for 7 Primetime Emmys. Another 17 wins & 49 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BOTEzNzI3MDc0N15BMl5BanBnXkFtZTgwMzk1MzA5NzE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BOTEzNzI3MDc0N15BMl5BanBnXkFtZTgwMzk1MzA5NzE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "8.6",
       imdbVotes: "198,041",
@@ -277,6 +285,7 @@ export const moviesState = atom({
         "يُعيد عالم الفايكنج إلى الحياة من خلال رحلة راغنار لوثبروك، أول فايكنج يخرج من أساطير النورس ويصل إلى صفحات التاريخ - رجل على حافة الأسطورة.",
     },
     {
+      id: 8,
       title_en: "gotham",
       year: "2014–",
       rated: "tV-14",
@@ -293,7 +302,7 @@ export const moviesState = atom({
       awards:
         "Nominated for 4 Primetime Emmys. Another 3 wins & 22 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMTY2MjMwNDE4OV5BMl5BanBnXkFtZTgwNjI1NjU0OTE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMTY2MjMwNDE4OV5BMl5BanBnXkFtZTgwNjI1NjU0OTE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "8.0",
       imdbVotes: "133,375",
@@ -314,6 +323,7 @@ export const moviesState = atom({
         "تدور الأحداث حول صعود المحقق جيمس جوردون إلى الشهرة في مدينة جوثام في السنوات القليلة قبل وصول باتمان.",
     },
     {
+      id: 9,
       title_en: "power",
       year: "2014–",
       rated: "tV-MA",
@@ -329,7 +339,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "1 win & 6 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BOTA4NTkzMjUzOF5BMl5BanBnXkFtZTgwNzg5ODkxOTE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BOTA4NTkzMjUzOF5BMl5BanBnXkFtZTgwNzg5ODkxOTE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "8.0",
       imdbVotes: "14,770",
@@ -350,6 +360,7 @@ export const moviesState = atom({
         "جيمس الشبح سانت باتريك، صاحب نادي ليلي ثري في نيويورك الذي يمتلك كل شيء ويخدم النخبة في المدينة ويحلم بشيء أكبر، يعيش حياة مزدوجة كملك لتجارة المخدرات.",
     },
     {
+      id: 10,
       title_en: "Narcos",
       year: "2015–",
       rated: "tV-MA",
@@ -365,7 +376,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "Nominated for 2 Golden Globes. Another 4 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMTU0ODQ4NDg2OF5BMl5BanBnXkFtZTgwNzczNTE4OTE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMTU0ODQ4NDg2OF5BMl5BanBnXkFtZTgwNzczNTE4OTE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "8.9",
       imdbVotes: "118,680",
@@ -386,6 +397,7 @@ export const moviesState = atom({
         "نظرة مستمرة على النشاطات الإجرامية للرئيس التشيلي بابلو إسكوبار.",
     },
     {
+      id: 11,
       title_en: "Breaking Bad",
       year: "2008–2013",
       rated: "tV-14",
@@ -401,7 +413,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "Won 2 Golden Globes. Another 132 wins & 218 nominations.",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMTQ0ODYzODc0OV5BMl5BanBnXkFtZTgwMDk3OTcyMDE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMTQ0ODYzODc0OV5BMl5BanBnXkFtZTgwMDk3OTcyMDE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "9.5",
       imdbVotes: "889,883",
@@ -422,6 +434,7 @@ export const moviesState = atom({
         "مدرس كيمياء في المدرسة الثانوية يتم تشخيصه بسرطان الرئة الذي لا يمكن علاجه، فيقرر تصنيع وبيع الميثامفيتامين لضمان مستقبل عائلته المالي.",
     },
     {
+      id: 12,
       comingSoon: true,
       title_en: "doctor Strange",
       year: "2016",
@@ -440,7 +453,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "N/A",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "N/A",
       imdbVotes: "N/A",
@@ -459,6 +472,7 @@ export const moviesState = atom({
         "بعد تدمير حياته المهنية، يحصل جراح بارع لكنه متغطرس ومغرور على فرصة جديدة عندما تأخذه ساحرة تحت جناحها وتدربه على الدفاع عن العالم ضد الشر.",
     },
     {
+      id: 13,
       comingSoon: true,
       title_en: "rogue One: A Star Wars Story",
       year: "2016",
@@ -496,6 +510,7 @@ export const moviesState = atom({
         "تقوم المتمردون بخطوة جريئة لسرقة خطط النجمة الموت، مما يؤدي إلى بدء الملحمة الشاملة التي تلي ذلك.",
     },
     {
+      id: 14,
       comingSoon: true,
       title_en: "assassin's Creed",
       year: "2016",
@@ -514,7 +529,7 @@ export const moviesState = atom({
       country: "UK, France, USA, Hong Kong",
       awards: "N/A",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMTU2MTQwMjU1OF5BMl5BanBnXkFtZTgwMDA5NjU5ODE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMTU2MTQwMjU1OF5BMl5BanBnXkFtZTgwMDA5NjU5ODE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "N/A",
       imdbVotes: "N/A",
@@ -533,6 +548,7 @@ export const moviesState = atom({
         "يستكشف كالوم لينش ذكريات أحد أسلافه، أجيلار، ويكتسب مهارات القاتل الرئيسي، ويكتشف أنه نسل من مجتمع القتلة السري.",
     },
     {
+      id: 15,
       comingSoon: true,
       title_en: "luke Cage",
       year: "2016–",
@@ -549,7 +565,7 @@ export const moviesState = atom({
       country: "USA",
       awards: "N/A",
       poster:
-        "http://ia.media-imdb.com/images/M/MV5BMTcyMzc1MjI5MF5BMl5BanBnXkFtZTgwMzE4ODY2OTE@._V1_SX300.jpg",
+        "https://ia.media-imdb.com/images/M/MV5BMTcyMzc1MjI5MF5BMl5BanBnXkFtZTgwMzE4ODY2OTE@._V1_SX300.jpg",
       Metascore: "N/A",
       imdbRating: "N/A",
       imdbVotes: "N/A",
