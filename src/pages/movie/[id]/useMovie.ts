@@ -18,7 +18,7 @@ const useRayyanMovie = () => {
       if (movie) {
         setMovie(movie);
       } else {
-        navigate("/movie/not-found");
+        navigate("/404");
       }
     }
   }, [route]);

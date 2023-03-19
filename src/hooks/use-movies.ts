@@ -51,10 +51,35 @@ const useRayyanMovies = () => {
     [movies, i18next.language]
   );
 
+  const getMoviesByGenres = useCallback(
+    (movie: IMovie) => {
+      const matchingMovies: IMovie[] = [];
+      movies.forEach((m: IMovie) => {
+        if (m.id !== movie.id) {
+          const commonGenres = m.genre_en
+            .split(",")
+            .filter((genre: string) => movie.genre_en.includes(genre));
+          if (commonGenres.length > 0) {
+            matchingMovies.push(m);
+          }
+        }
+      });
+      return matchingMovies;
+    },
+    [movies, i18next.language]
+  );
+
   useEffect(() => {
     if (!randomMovie) getRandomMovie();
   }, [movies]);
-  return { movies, randomMovie, getMoviesByGenre, getMovieById, goToMovie };
+  return {
+    movies,
+    randomMovie,
+    getMoviesByGenres,
+    getMoviesByGenre,
+    getMovieById,
+    goToMovie,
+  };
 };
 
 export { useRayyanMovies };

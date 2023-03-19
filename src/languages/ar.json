@@ -21,6 +21,15 @@
     "title": "فلم",
     "play": "مشاهدة",
     "votes": "تصويتات",
-    "released": "الاصدار"
-  }
+    "released": "الاصدار",
+    "similler": "افلام مشابهة"
+  },
+  "hotKey": {
+    "title": "اختصارات",
+    "changeToArabic": "للعربيه",
+    "changeToEn": "English",
+    "search": "البحث",
+    "home": "الصفحة الرئيسية"
+  },
+  "notFound": "يبدو ان الصفحة التي زرتها غير موجوده"
 }

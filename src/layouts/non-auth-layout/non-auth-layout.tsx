@@ -1,5 +1,6 @@
 import { ELanguage } from "@/enums";
 import { useRayyanRouter } from "@/hooks";
+import { HotKeyWidget } from "@/widgets";
 import { changeLanguage } from "i18next";
 import { useEffect } from "react";
 import { Footer } from "../footer";
@@ -51,6 +52,7 @@ const NonAuthLayout = ({ children }: INonAuthLayout) => {
       <Header />
       <div style={clasess.bodyContainer}>{children}</div>
       <Footer />
+      <HotKeyWidget />
     </div>
   );
 };

@@ -85,6 +85,14 @@ const useStyle = ({ movie }: { movie: IMovie | null }) => {
         color: neutralColor("white"),
         ...getFontFamily(getLanguage(), 500, 14),
       },
+      linkAR: {
+        cursor: "pointer",
+        ...FONT_FAMILY.Cairo(400, 12),
+      },
+      linkEN: {
+        cursor: "pointer",
+        ...FONT_FAMILY.Inter(400, 12),
+      },
     };
   }, [theme, i18next.language, movie]);
   return {

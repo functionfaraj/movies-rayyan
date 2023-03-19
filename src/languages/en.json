@@ -21,6 +21,15 @@
     "title": "Movie",
     "play": "Play",
     "votes": "Votes",
-    "released": "Released"
-  }
+    "released": "Released",
+    "similler": "Similler movies"
+  },
+  "hotKey": {
+    "title": "Shortcut",
+    "changeToArabic": "للعربيه",
+    "changeToEn": "English",
+    "search": "Search page",
+    "home": "Home page"
+  },
+  "notFound": "Looks like the page you visit is not founded"
 }

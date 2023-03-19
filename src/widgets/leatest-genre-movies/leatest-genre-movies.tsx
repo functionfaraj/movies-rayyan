@@ -1,7 +1,5 @@
 import { useRayyanMovies } from "@/hooks/use-movies";
 import i18next from "i18next";
-import * as animationData from "./loading.json";
-
 import { useStyle } from "./style";
 import { IMovie } from "@/store/movies";
 

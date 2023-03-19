@@ -1,3 +1,4 @@
+import { ELanguage } from "@/enums";
 import { useRayyanMovies } from "@/hooks/use-movies";
 import { PlayIcon } from "@/icons";
 import { IMovie } from "@/store/movies";
@@ -15,6 +16,17 @@ const MovieHeaderWidget = ({ movie }: { movie: IMovie }) => {
           <div style={clasess.infoContainer}>
             <div style={clasess.labelContainer}>
               <div style={clasess.label}>{movie.year}</div>
+              {i18next.language === ELanguage.EN && (
+                <div style={clasess.label}>
+                  <span style={clasess.linkEN}>{movie.genre_en}</span>
+                </div>
+              )}
+              {i18next.language === ELanguage.AR && (
+                <div style={clasess.label}>
+                  <span style={clasess.linkAR}>{movie.genre_ar}</span>
+                </div>
+              )}
+
               <div style={clasess.label}>{movie.language}</div>
               <div style={clasess.label}>{movie.awards}</div>
             </div>
