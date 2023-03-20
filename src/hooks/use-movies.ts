@@ -52,7 +52,6 @@ const useRayyanMovies = () => {
 
   const goToMovie = useCallback(
     (id: number) => {
-      console.log(id);
       navigate(`/movie/${id}`);
     },
     [movies, i18next.language]
