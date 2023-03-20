@@ -46,7 +46,7 @@ const useStyle = () => {
         justifyContent: "flex-start",
         gap: convertWidthToVW(10),
         maxWidth: "100vw",
-        flexWrap: "wrap",
+        flexWrap: "wrap" as "wrap",
       },
       movie: {
         cursor: "pointer",
