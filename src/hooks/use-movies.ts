@@ -1,11 +1,18 @@
-import { IMovie, moviesState } from "@/store/movies";
-import i18next from "i18next";
-import { useRouter } from "next/router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRecoilValue } from "recoil";
+import i18next from "i18next";
+import { IMovie, moviesState } from "@/store/movies";
 import { useRayyanRouter } from "./use-rayyan-router";
 
 const useRayyanMovies = () => {
+  const weights = useMemo(() => {
+    return {
+      name: 3,
+      description: 2,
+      genre: 1,
+    };
+  }, []);
+  const [searchResult, setSearchResult] = useState<IMovie[]>([]);
   const movies = useRecoilValue(moviesState);
   const { navigate } = useRayyanRouter();
   const [randomMovie, setRandomMovie] = useState<any | null | IMovie>(null);
@@ -68,6 +75,72 @@ const useRayyanMovies = () => {
     },
     [movies, i18next.language]
   );
+  const calculateWeightedScore = useCallback(
+    (
+      movie: IMovie,
+      searchTerm: string,
+      weights: { name: number; description: number; genre: number }
+    ): number => {
+      const searchTerms = searchTerm.trim().split(" ");
+
+      const nameScore = searchTerms.some(
+        (term: string) =>
+          new RegExp(term, "i").test(movie.title_ar) ||
+          new RegExp(term, "i").test(movie.title_en)
+      )
+        ? weights.name
+        : 0;
+      const descriptionScore = searchTerms.some(
+        (term: string) =>
+          new RegExp(term, "i").test(movie.title_ar) ||
+          new RegExp(term, "i").test(movie.title_en)
+      )
+        ? weights.description
+        : 0;
+      const genreScore =
+        movie.genre_ar
+          .split(",")
+          .some((genre: string) =>
+            searchTerms.some((term) => new RegExp(term, "i").test(genre))
+          ) ||
+        movie.genre_en
+          .split(",")
+          .some((genre: string) =>
+            searchTerms.some((term) => new RegExp(term, "i").test(genre))
+          )
+          ? weights.genre
+          : 0;
+
+      return nameScore + descriptionScore + genreScore;
+    },
+    [movies]
+  );
+  const searchMovies = useCallback(
+    (
+      searchTerm: string,
+      weights: { name: number; description: number; genre: number }
+    ): IMovie[] => {
+      return movies
+        .map((movie) => ({
+          movie,
+          score: calculateWeightedScore(movie, searchTerm, weights),
+        }))
+        .filter(({ score }) => score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(({ movie, score }) => ({
+          ...movie,
+          searchScore: score,
+        }));
+    },
+    [movies]
+  );
+
+  const searchForMovies = useCallback(
+    (search: string) => {
+      setSearchResult(searchMovies(search, weights));
+    },
+    [movies, i18next.language]
+  );
 
   useEffect(() => {
     if (!randomMovie) getRandomMovie();
@@ -75,10 +148,13 @@ const useRayyanMovies = () => {
   return {
     movies,
     randomMovie,
+    searchResult,
+    weights,
     getMoviesByGenres,
     getMoviesByGenre,
     getMovieById,
     goToMovie,
+    searchForMovies,
   };
 };
 

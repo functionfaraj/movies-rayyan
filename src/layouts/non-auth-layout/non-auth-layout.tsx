@@ -36,7 +36,7 @@ const NonAuthLayout = ({ children }: INonAuthLayout) => {
       }
       if (
         event.ctrlKey &&
-        (event.key.toLowerCase() === "a" || event.key.toLowerCase() === "ش")
+        (event.key.toLowerCase() === "u" || event.key.toLowerCase() === "ع")
       ) {
         event.preventDefault();
         changeLanguage(ELanguage.AR);

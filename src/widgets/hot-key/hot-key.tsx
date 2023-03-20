@@ -14,7 +14,7 @@ const HotKeyWidget = () => {
         <tbody>
           {i18next.language === ELanguage.EN && (
             <tr>
-              <td style={clasess.link}>ctrl+a {"=>"}</td>
+              <td style={clasess.link}>ctrl+ع {"=>"}</td>
               <td style={clasess.linkAR}>{t("hotKey.changeToArabic")}</td>
             </tr>
           )}

@@ -31,5 +31,15 @@
     "search": "Search page",
     "home": "Home page"
   },
+  "search": {
+    "title": "Search page",
+    "placeholder": "Search by name, plot, genre",
+    "noResult": "There is no result for your search",
+    "result": "Search result for ",
+    "searchScore": "Search score",
+    "name": "Name",
+    "description": "Description",
+    "genre": "Genre"
+  },
   "notFound": "Looks like the page you visit is not founded"
 }

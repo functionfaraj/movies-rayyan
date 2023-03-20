@@ -3,9 +3,10 @@ import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
 import { useRayyanTheme } from "@/hooks/use-rayyan-theme";
 import { convertHeightToVH, convertWidthToVW } from "@/utils/adapter";
-import { FONT_FAMILY } from "@/utils/font-family";
+import { FONT_FAMILY, getFontFamily } from "@/utils/font-family";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import i18next from "i18next";
 
 const StyledTextField = styled(TextField, {
   shouldForwardProp: (propName: any) =>
@@ -20,35 +21,35 @@ const StyledTextField = styled(TextField, {
     boxSizing: "border-box",
     borderRadius: props?.style?.borderRadius || 5,
     height: convertHeightToVH(42),
-    ...FONT_FAMILY.Almarai(400, 14),
+    ...getFontFamily(i18next.language, 400, 14),
     lineHeight: "21px",
     display: "flex",
     alignItems: "center",
     width: "100%",
     color: props.error
       ? `${props.errorColor(300)}`
-      : `${props.primaryColor(300)}`,
+      : `${props.primaryColor(500)}`,
     ...props.style,
   },
 
   "& .MuiOutlinedInput-root": {
     "&:hover fieldset": {
       border: props.error
-        ? `2px solid ${props.errorColor(300)}`
-        : `2px solid ${props.neutralColor(300)}`,
+        ? `2px solid ${props.errorColor(100)}`
+        : `2px solid ${props.neutralColor(100)}`,
     },
     "& fieldset": {
       border: props.error
-        ? `1px solid ${props.errorColor(300)}`
-        : `1px solid ${props.neutralColor(300)}`,
+        ? `1px solid ${props.errorColor(100)}`
+        : `1px solid ${props.neutralColor(100)}`,
       boxSizing: "border-box",
       borderRadius: props?.style?.borderRadius || 5,
       width: "100%",
     },
     "&.Mui-focused fieldset": {
       borderColor: props.error
-        ? `${props.errorColor(300)}`
-        : props.neutralColor(300),
+        ? `${props.errorColor(100)}`
+        : props.neutralColor(100),
       borderRadius: props?.style?.borderRadius || 5,
       width: "100%",
     },
@@ -67,6 +68,7 @@ const RayyanTextInput = ({
   multiline,
   InputProps,
   Lefticon,
+  autoFocus = false,
 }: {
   value?: string;
   onChange?: any;
@@ -79,6 +81,7 @@ const RayyanTextInput = ({
   multiline?: any;
   InputProps?: any;
   Lefticon?: any;
+  autoFocus?: boolean;
 }) => {
   const { primaryColor, secondColor, errorColor, neutralColor } =
     useRayyanTheme();
@@ -131,6 +134,7 @@ const RayyanTextInput = ({
         primaryColor={primaryColor}
         errorColor={errorColor}
         neutralColor={neutralColor}
+        autoFocus={autoFocus}
       />
     </div>
   );
